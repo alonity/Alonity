@@ -1,8 +1,8 @@
 {
     "name": "alonity/alonity",
-    "description": "Alonity core",
-    "type": "library",
-    "keywords": ["alonity", "core", "skeleton", "base"],
+    "description": "Alonity framework",
+    "type": "project",
+    "keywords": ["alonity", "framework", "qexy", "core", "skeleton"],
     "homepage": "https://qexy.org",
     "version": "2.0.0",
     "license": "MIT",
@@ -16,12 +16,17 @@
     "minimum-stability": "dev",
     "require": {
         "php": "^7.2",
-        "ext-mbstring": "*",
-      "ext-openssl": "*"
+        "alonity/router": "dev-main",
+        "alonity/database": "dev-main",
+        "alonity/request": "dev-main",
+        "alonity/eventhandler": "dev-main",
+        "alonity/logger": "dev-main",
+        "twig/twig": "^3.0"
     },
     "autoload": {
         "psr-4": {
-            "alonity\\alonity\\": "src/"
+            "alonity\\alonity\\": "src/",
+            "app\\": "app/"
         }
     }
 }
