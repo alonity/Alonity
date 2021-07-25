@@ -1,0 +1,27 @@
+{
+    "name": "alonity/alonity",
+    "description": "Alonity core",
+    "type": "library",
+    "keywords": ["alonity", "core", "skeleton", "base"],
+    "homepage": "https://qexy.org",
+    "version": "2.0.0",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Qexy",
+            "email": "admin@qexy.org",
+            "homepage": "https://qexy.org"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.2",
+        "ext-mbstring": "*",
+      "ext-openssl": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "alonity\\alonity\\": "src/"
+        }
+    }
+}
