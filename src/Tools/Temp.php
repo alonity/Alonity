@@ -12,7 +12,7 @@
  *
  * @license MIT
  *
- * @version 1.0.0
+ * @version 1.1.0
  *
  */
 
@@ -91,5 +91,26 @@ class Temp {
         $token = self::hash($key);
 
         return isset(self::$storage[$token]);
+    }
+
+
+
+    /**
+     * Delete variable by key
+     *
+     * @param mixed $key
+     *
+     * @return bool
+     */
+    public static function delete($key) : bool {
+        $token = self::hash($key);
+
+        if(array_key_exists($token, self::$storage)){
+            unset(self::$storage[$token]);
+
+            return true;
+        }
+
+        return false;
     }
 }
