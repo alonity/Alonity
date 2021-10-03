@@ -18,15 +18,15 @@
 
 namespace alonity\alonity\MVC\Controller;
 
-use alonity\router\RequestInheritance;
-use alonity\router\ResponseInheritance;
+use alonity\router\RequestInterface;
+use alonity\router\ResponseInterface;
 
 class ControllerInheritance {
 
     private $method = '';
 
 
-    public function index(RequestInheritance $request, ResponseInheritance $response){
+    public function index(RequestInterface $request, ResponseInterface $response){
         $response->setCode(404)
             ->send("{$request->getMethod()} / 404 | Method \"{$this->method}\" not found");
     }
